@@ -2,8 +2,10 @@
 
 import React from 'react';
 import type { AppProps } from 'next/app';
-import GlobalStyle from '../styles/globalStyle';
+import GlobalStyle from '../src/styles/globalStyle';
 import Head from 'next/head';
+import light from '../src/styles/themes/light';
+import { ThemeProvider } from 'styled-components';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,9 +14,10 @@ function App({ Component, pageProps }: AppProps) {
         <title>Filipe Alves - Portfolio</title>
       </Head>
 
-      <GlobalStyle />
-
-      <Component {...pageProps} />
+      <ThemeProvider theme={light}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   );
 }

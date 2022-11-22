@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     outline: none;
     background-color: transparent;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem;
+    font-size: ${({ theme }) => theme.fonts.normal};
     font-weight: 400;
     text-decoration: none;
     line-height: 130%;
