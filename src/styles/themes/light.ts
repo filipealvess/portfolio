@@ -6,8 +6,8 @@ const light: DefaultTheme = {
   background: '#F4F4F9',
   borderColor: '#E2E2E2',
   sectionBackground: '#FFFFFF',
-  textColor: '#111111',
-  titleColor: '#000000',
+  textColor: '#222222',
+  titleColor: '#111111',
   ...defaultThemeValues
 };
 
