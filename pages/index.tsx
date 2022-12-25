@@ -1,6 +1,10 @@
 import React from 'react';
+import Experience from '../src/components/Experience';
 import Header from '../src/components/Header';
 import Networks from '../src/components/Networks';
+import Section from '../src/components/Section';
+import experiences from '../src/static/experiences';
+import researchProjects from '../src/static/researchProjects';
 
 interface Props {
   toggleTheme: () => void;
@@ -21,6 +25,18 @@ export default function Home({ toggleTheme }: Props) {
       </p>
 
       <Networks />
+
+      <Section title="Experiência Profissional">
+        {experiences.map((experience, index) => (
+          <Experience key={index} experience={experience} />
+        ))}
+      </Section>
+
+      <Section title="Projetos de Pesquisa">
+        {researchProjects.map((experience, index) => (
+          <Experience key={index} experience={experience} />
+        ))}
+      </Section>
     </>
   );
 }

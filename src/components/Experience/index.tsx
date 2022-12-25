@@ -70,7 +70,7 @@ export default function Experience({ experience }: Props) {
         </List>
 
         <List>
-          <h5>Ferrametas utilizadas:</h5>
+          <h5>Ferramentas utilizadas:</h5>
 
           <Grid>
             {experience.tools.map((tool, index) => (
