@@ -39,10 +39,17 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${({ theme }) => theme.fonts.title};
   }
 
-  h2, h3 {
+  h2, h3, h4 {
     color: ${({ theme }) => theme.titleColor};
-    font-size: ${({ theme }) => theme.fonts.subtitle};
     font-weight: 500;
+  }
+  
+  h2, h3 {
+    font-size: ${({ theme }) => theme.fonts.subtitle};
+  }
+  
+  h4 {
+    font-size: ${({ theme }) => theme.fonts.bigText};
   }
 `;
 
