@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import type { AppProps } from 'next/app';
 import GlobalStyle from '../src/styles/globalStyle';
 import Head from 'next/head';
@@ -11,8 +11,23 @@ import dark from '../src/styles/themes/dark';
 function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState('light');
 
+  useEffect(() => {
+    if (!localStorage) return;
+
+    const localTheme = localStorage.getItem('theme');
+
+    if (localTheme) {
+      setTheme(localTheme);
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  }, []);
+
   function toggleTheme() {
-    setTheme(prevState => prevState === 'light' ? 'dark' : 'light');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   }
 
   return (
