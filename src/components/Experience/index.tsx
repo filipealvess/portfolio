@@ -59,32 +59,36 @@ export default function Experience({ experience }: Props) {
           <Description key={index}>{description}</Description>
         ))}
 
-        <List>
-          <h5>Habilidades adquiridas/melhoradas:</h5>
+        {experience.skills.length > 0 && (
+          <List>
+            <h5>Habilidades adquiridas/melhoradas:</h5>
 
-          <ul>
-            {experience.skills.map((skill, index) => (
-              <li key={index}>{skill}</li>
-            ))}
-          </ul>
-        </List>
+            <ul>
+              {experience.skills.map((skill, index) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </List>
+        )}
 
-        <List>
-          <h5>Ferramentas utilizadas:</h5>
+        {experience.tools.length > 0 && (
+          <List>
+            <h5>Ferramentas utilizadas:</h5>
 
-          <Grid>
-            {experience.tools.map((tool, index) => (
-              <Tool
-                key={index}
-                width={40}
-                height={40}
-                src={tool.image}
-                alt={tool.name}
-                title={tool.name}
-              />
-            ))}
-          </Grid>
-        </List>
+            <Grid>
+              {experience.tools.map((tool, index) => (
+                <Tool
+                  key={index}
+                  width={40}
+                  height={40}
+                  src={tool.image}
+                  alt={tool.name}
+                  title={tool.name}
+                />
+              ))}
+            </Grid>
+          </List>
+        )}
       </Content>
     </Container>
   );
