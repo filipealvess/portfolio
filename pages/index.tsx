@@ -1,12 +1,14 @@
 import React from 'react';
 import Experience from '../src/components/Experience';
 import Header from '../src/components/Header';
+import Language from '../src/components/Language';
 import Levels from '../src/components/Levels';
 import Networks from '../src/components/Networks';
 import Section from '../src/components/Section';
 import Skill from '../src/components/Skill';
 import education from '../src/static/education';
 import experiences from '../src/static/experiences';
+import languages from '../src/static/languages';
 import researchProjects from '../src/static/researchProjects';
 import techSkills from '../src/static/techSkills';
 
@@ -53,6 +55,12 @@ export default function Home({ toggleTheme }: Props) {
       <Section title="Formação Acadêmica">
         {education.map((experience, index) => (
           <Experience key={index} experience={experience} />
+        ))}
+      </Section>
+
+      <Section title="Idiomas">
+        {languages.map((lang, index) => (
+          <Language key={index} lang={lang} />
         ))}
       </Section>
     </>
