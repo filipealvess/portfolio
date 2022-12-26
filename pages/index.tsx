@@ -1,5 +1,6 @@
 import React from 'react';
 import Experience from '../src/components/Experience';
+import Footer from '../src/components/Footer';
 import Header from '../src/components/Header';
 import Language from '../src/components/Language';
 import Levels from '../src/components/Levels';
@@ -63,6 +64,8 @@ export default function Home({ toggleTheme }: Props) {
           <Language key={index} lang={lang} />
         ))}
       </Section>
+
+      <Footer />
     </>
   );
 }
