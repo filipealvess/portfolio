@@ -15,6 +15,8 @@ const GlobalStyle = createGlobalStyle`
     line-height: 150%;
     list-style: none;
     box-sizing: border-box;
+    transition-duration: 0.3s;
+    transition-property: background-color, color;
   }
 
   button { cursor: pointer; }
