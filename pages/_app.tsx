@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
 import React, { useEffect, useState } from 'react';
-import type { AppProps } from 'next/app';
-import GlobalStyle from '../src/styles/globalStyle';
 import Head from 'next/head';
-import light from '../src/styles/themes/light';
+import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
+import GlobalStyle from '../src/styles/globalStyle';
+import light from '../src/styles/themes/light';
 import dark from '../src/styles/themes/dark';
 
 function App({ Component, pageProps }: AppProps) {
@@ -13,6 +13,17 @@ function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     if (!localStorage) return;
+
+    if (window.matchMedia != undefined) {
+      const userPreferIsDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      if (userPreferIsDark) {
+        setTheme('dark');
+        localStorage.setItem('theme', 'dark');
+
+        return;
+      }
+    }
 
     const localTheme = localStorage.getItem('theme');
 
