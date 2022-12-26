@@ -1,11 +1,14 @@
 import React from 'react';
 import Experience from '../src/components/Experience';
 import Header from '../src/components/Header';
+import Levels from '../src/components/Levels';
 import Networks from '../src/components/Networks';
 import Section from '../src/components/Section';
+import Skill from '../src/components/Skill';
 import education from '../src/static/education';
 import experiences from '../src/static/experiences';
 import researchProjects from '../src/static/researchProjects';
+import techSkills from '../src/static/techSkills';
 
 interface Props {
   toggleTheme: () => void;
@@ -36,6 +39,14 @@ export default function Home({ toggleTheme }: Props) {
       <Section title="Projetos de Pesquisa">
         {researchProjects.map((experience, index) => (
           <Experience key={index} experience={experience} />
+        ))}
+      </Section>
+
+      <Section title="Habilidades Técnicas">
+        <Levels />
+
+        {techSkills.map((skill, index) => (
+          <Skill key={index} skill={skill} />
         ))}
       </Section>
 
