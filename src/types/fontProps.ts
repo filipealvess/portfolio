@@ -1,4 +1,5 @@
 interface FontsProps {
+  small: string;
   normal: string;
   bigText: string;
   subtitle: string;

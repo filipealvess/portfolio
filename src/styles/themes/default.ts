@@ -6,6 +6,7 @@ interface Props {
 
 const defaultThemeValues: Props = {
   fonts: {
+    small: '1.4rem',
     normal: '1.6rem',
     bigText: '1.8rem',
     subtitle: '2.4rem',
