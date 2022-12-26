@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronUp } from 'react-feather';
 import ExperienceProps from '../../types/experienceProps';
+import ToolImage from '../ToolImage';
 import {
   Container,
   Content,
@@ -11,8 +12,7 @@ import {
   ImageContainer,
   List,
   Time,
-  Titles,
-  Tool
+  Titles
 } from './styles';
 
 interface Props {
@@ -77,7 +77,7 @@ export default function Experience({ experience }: Props) {
 
             <Grid>
               {experience.tools.map((tool, index) => (
-                <Tool
+                <ToolImage
                   key={index}
                   width={40}
                   height={40}

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styled, { css } from 'styled-components';
 
 interface ContentProps {
@@ -120,14 +119,4 @@ export const Grid = styled.footer`
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-`;
-
-export const Tool = styled(Image)`
-  border: 1px solid ${({ theme }) => theme.borderColor};
-  border-radius: 8px;
-  transition: 0.3s transform;
-
-  &:hover {
-    transform: scale(1.1);
-  }
 `;
