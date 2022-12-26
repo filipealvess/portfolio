@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, ChevronUp } from 'react-feather';
-import ExperienceProps from '../../types/ExperienceProps';
+import ExperienceProps from '../../types/experienceProps';
 import {
   Container,
   Content,

@@ -1,4 +1,4 @@
-import ExperienceProps from '../types/ExperienceProps';
+import ExperienceProps from '../types/experienceProps';
 
 const education: ExperienceProps[] = [
   {
