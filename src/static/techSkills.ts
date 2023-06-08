@@ -11,6 +11,7 @@ const techSkills: SkillProps[] = [
       { name: 'ReactJS', image: '/technologies/reactjs.jpg', level: 'high' },
       { name: 'NextJS', image: '/technologies/nextjs.jpg', level: 'high' },
       { name: 'VueJS', image: '/technologies/vuejs.jpg', level: 'high' },
+      { name: 'Redux', image: '/technologies/redux.jpg', level: 'mid' },
       { name: 'NuxtJS', image: '/technologies/nuxtjs.jpg', level: 'mid' },
       { name: 'Sass', image: '/technologies/sass.jpg', level: 'mid' },
       { name: 'Bootstrap', image: '/technologies/bootstrap.jpg', level: 'low' },
@@ -25,6 +26,7 @@ const techSkills: SkillProps[] = [
       { name: 'Flask', image: '/technologies/flask.jpg', level: 'high' },
       { name: 'PHP', image: '/technologies/php.jpg', level: 'mid' },
       { name: 'Python', image: '/technologies/python.jpg', level: 'mid' },
+      { name: 'Graphql', image: '/technologies/graphql.jpg', level: 'mid' },
       { name: 'Laravel', image: '/technologies/laravel.jpg', level: 'low' },
     ]
   },
