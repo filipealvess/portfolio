@@ -2,6 +2,32 @@ import ExperienceProps from '../types/experienceProps';
 
 const experiences: ExperienceProps[] = [
   {
+    title: 'Desenvolvedor Frontend e Designer',
+    subtitle: 'Vulcanet',
+    cover: '/experiences/vulcanet.jpg',
+    descriptions: [
+      'Colaborei com design e desenvolvimento de dashboards e outras melhorias no peçaZap, produto voltado à comunicação, vendas e atendimento ao cliente via canais online de comunicação.',
+      'Participei de discussões técnicas com foco em melhorias de performance e experiência do usuário, levantamento de requisitos e revisões de código.'
+    ],
+    start: 'Jan/2023',
+    end: 'O momento',
+    skills: [
+      'Trabalho em equipe',
+      'Frontend',
+      'Proatividade',
+      'Design de interfaces',
+      'Entendimento do negócio',
+      'Versionamento de código',
+    ],
+    tools: [
+      { name: 'Figma', image: '/technologies/figma.jpg' },
+      { name: 'ReactJS', image: '/technologies/reactjs.jpg' },
+      { name: 'Redux', image: '/technologies/redux.jpg' },
+      { name: 'Docker', image: '/technologies/docker.jpg' },
+      { name: 'Graphql', image: '/technologies/graphql.jpg' },
+    ]
+  },
+  {
     title: 'Desenvolvedor Fullstack',
     subtitle: 'Doity',
     cover: '/experiences/doity.jpg',
@@ -10,7 +36,7 @@ const experiences: ExperienceProps[] = [
       'Em colaboração com o IFAL, representei a empresa em um projeto que extende a Plataforma de Eventos, tendo como objetivo recomendar configurações para os eventos, aumentando vendas e engajamento com o público.'
     ],
     start: 'Jun/2022',
-    end: 'O momento',
+    end: 'Jan/2023',
     skills: [
       'Trabalho em equipe',
       'Proatividade',
